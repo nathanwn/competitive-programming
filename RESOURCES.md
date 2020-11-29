@@ -49,6 +49,8 @@
 ### 4.3.1. Segment Tree
 
 * :page_facing_up: [Segment Tree - cp-algorithm](https://cp-algorithms.com/data_structures/segment_tree.html)
+* :tv: [Segment Tree - Algorithms Live! - Ep. 4](https://www.youtube.com/watch?v=Tr-xEGoByFQ&ab_channel=AlgorithmsLive%21)
+
 
 ### 4.3.2. Fenwick Tree
 
@@ -76,28 +78,35 @@
 * :book: Strongly Connected Component - CLRS book - section 22.5 - page 615
 * :page_facing_up:
 
-## 5.3. Flows
-* :tv: [Flow Concepts: Flow, Cut, Residual Graph, Augmenting Path - Lecture 13, MIT OCW 6.046J, Spring 2015](https://www.youtube.com/watch?v=VYZGlgzr_As)
-* :tv: [Max Flow - Min Cut Theorem - Lecture 14, MIT OCW 6.046J, Spring 2015](https://www.youtube.com/watch?v=8C_T4iTzPCU)
-* :page_facing_up: [Ford-Fulkerson and Edmonds-Karp algorithms - cp-algorithms](https://cp-algorithms.com/graph/edmonds_karp.html)
+## 5.3. Shortest Path
 
-## 5.4. Shortest Path
-
-### 5.4.1. Dijkstra
+### 5.3.1. Dijkstra
 * :page_facing_up: [Dijkstra - cp-algorithms](https://cp-algorithms.com/graph/dijkstra.html)
 * :page_facing_up: [Dijkstra on Sparse Graph - cp-algorithms](https://cp-algorithms.com/graph/dijkstra_sparse.html)
 * :page_facing_up: [Dijstra proof - oregonstate.edu](https://web.engr.oregonstate.edu/~glencora/wiki/uploads/dijkstra-proof.pdf)
 
-### 5.4.2. Bellman-Ford
+### 5.3.2. Bellman-Ford
 * :page_facing_up: [Bellman-Ford - cp-algorithms](https://cp-algorithms.com/graph/bellman_ford.html)
 
-### 5.4.3. Floyd-Warshall
+### 5.3.3. Floyd-Warshall
 
-## 5.5. Minimum Spanning Tree (MST)
+## 5.4. Minimum Spanning Tree (MST)
 
-### 5.5.1. Prim's MST
+### 5.4.1. Prim's MST
 
-### 5.5.2. Kruskal's MST
+### 5.4.2. Kruskal's MST
+
+## 5.5. Flows
+
+### Concepts
+
+* :tv: [Flow Concepts: Flow, Cut, Residual Graph, Augmenting Path - Lecture 13, MIT OCW 6.046J, Spring 2015](https://www.youtube.com/watch?v=VYZGlgzr_As)
+* :tv: [Max Flow - Min Cut Theorem - Lecture 14, MIT OCW 6.046J, Spring 2015](https://www.youtube.com/watch?v=8C_T4iTzPCU)
+
+### Max Flow
+* :page_facing_up: [Ford-Fulkerson and Edmonds-Karp algorithms - cp-algorithms](https://cp-algorithms.com/graph/edmonds_karp.html)
+
+### Matching
 
 
 # 6. Dynamic Programming
