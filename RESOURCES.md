@@ -26,7 +26,7 @@
 
 ### 3.1.2. Prefix Sum
 
-## 3.2. Immediate
+## 3.2. Intermediate
 
 ### 3.2.1. Coordinate Compression
 
@@ -41,10 +41,10 @@
 ### 4.1.2. Disjoint Set
 * :tv: [Disjoint Set - Bo Qian's Video](https://www.youtube.com/watch?v=p_AJmSDyt94)
 
-## 4.2. Immediate
+## 4.2. Intermediate
 * :tv: [AVL Tree - MIT OCW](https://www.youtube.com/watch?v=FNeL18KsWPc)
 
-## 4.3. Upper-Immediate
+## 4.3. Upper-Intermediate
 
 ### 4.3.1. Segment Tree
 
@@ -54,6 +54,12 @@
 
 ### 4.3.2. Fenwick Tree
 
+* :page_facing_up: [Fenwick Tree - cp-algorithm](https://cp-algorithms.com/data_structures/fenwick.html)
+
+
+### 4.3.3. Sqrt Decomposition & Mo's Algorithm
+
+* :page_facing_up: [Sqrt Decomposition - cp-algorithm](https://cp-algorithms.com/data_structures/sqrt_decomposition.html)
 
 # 5. Graph Theory
 
@@ -71,7 +77,7 @@
 ### 5.1.4. Topological Sort
 * :book: DFS-based Topological Sort - CLRS book - section 22.4 - page 612
 
-## 5.2. Immediate Topics
+## 5.2. Intermediate Topics
 
 ### 5.2.1. Strongly Connected Component
 
@@ -123,7 +129,7 @@
 
 ### 7.1.1. Euclidean's GCD
 
-## 7.2. Immediate
+## 7.2. Intermediate
 
 ### 7.2.1. Binary Exponentiation
 * :page_facing_up: [Binary Exponentiation - cp-algorithms](https://cp-algorithms.com/algebra/binary-exp.html)
@@ -157,7 +163,7 @@
 
 ### 9.1.1. Trie
 
-## 9.2. Immediate
+## 9.2. Intermediate
 
 ### 9.2.1. Knuth-Morris-Pratt (KMP)
 
