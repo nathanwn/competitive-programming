@@ -66,8 +66,9 @@ int main() {
     //   (b) we don't place the jth segment at the very end of the pin
     //
     //   dp[i][j] = max(
-    //   (a)  dp[i - len][j - 1] + sum(i - len + 1, i),
-    //   (b)  dp[i - 1][j]
+    //   (a)  dp[i - len][j - 1] + sum(i - len + 1, i), // place jth at the end
+    //   (b)  dp[i - 1][j]  // what ever way that we can fit pattern[1..j] into
+    //                      // pin[1..i - 1], regardless of where jth is
     //   )
     //
     // Base cases: dp[i][0] = 0 for all i
