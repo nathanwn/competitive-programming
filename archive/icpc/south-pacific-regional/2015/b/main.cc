@@ -66,7 +66,7 @@ int main() {
     //   (b) we don't place the jth segment at the very end of the pin
     //
     //   dp[i][j] = max(
-    //   (a)  dp[i - length(segment_j)][j - 1] + sum(i - length(segment_j) + 1, i),
+    //   (a)  dp[i - len][j - 1] + sum(i - len + 1, i),
     //   (b)  dp[i - 1][j]
     //   )
     //
