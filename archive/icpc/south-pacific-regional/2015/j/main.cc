@@ -237,8 +237,8 @@ struct Solver {
         int s = 2 * n;
         int t = 2 * n + 1;
     
-        // Dinic<int> dinic(2 * n + 2, s, t);
-        EdmondsKarp<int> maxFlowSolver(2 * n + 2, s, t);
+        // Change Dinic to EdmondsKarp if you want to try
+        Dinic<int> maxFlowSolver(2 * n + 2, s, t);
         
         for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) {
