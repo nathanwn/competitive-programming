@@ -19,7 +19,8 @@ int f(int g, int a, int b, int l) {
 
 /**
  * Idea: put all w and g values into a list, sort them, then go from left
- * to right while keep track of the longest range and answer when needed
+ * to right while keep track of the longest range and answer when a
+ * w value is encountered
 **/
 
 int main() {
@@ -31,7 +32,7 @@ int main() {
 
     vector<int> w(k);
 
-    vector<pair<int, bool>> vp; // second == true if first = w[j] for some j
+    vector<pair<int, bool>> vp; // second == true if first is a w value
     vp.emplace_back(0, false);
 
     for (int j = 0; j < k; j++) {
