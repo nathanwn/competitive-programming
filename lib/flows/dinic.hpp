@@ -92,9 +92,7 @@ struct Dinic {
                 if (df <= eps) break;
                 totalDf += df;
             }
-            if (totalDf <= eps) {
-                break;
-            }
+            if (totalDf <= eps) break;
             f += totalDf;
         }
 
