@@ -1,5 +1,7 @@
 /**
  * Tested here: https://cses.fi/problemset/task/1694/
+ * This version of Dinic should work for Flow graph with
+ * floating-point capacities
 **/
 
 #pragma once
@@ -99,25 +101,3 @@ struct Dinic {
         return f;
     }
 };
-
-int main() {
-    int n, m;
-    cin >> n >> m;
-
-    flow_graph<int64_t> g(n, 0, n - 1);
-    Dinic<int64_t> meSolver(n, 0, n - 1);
-
-    for (int i = 0; i < m; i++) {
-        int u, v, c;
-        cin >> u >> v >> c;
-        u--; v--;
-        g.add(u, v, c, 0);
-        meSolver.addEdge(u, v, c);
-    }
-
-    dinic<int64_t> solver(g);
-
-    cout << meSolver.maxFlow() << '\n';
-
-    return 0;
-}
