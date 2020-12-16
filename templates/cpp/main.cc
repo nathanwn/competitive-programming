@@ -40,6 +40,8 @@ void debug_out(Head H, Tail... T) {
 #define debug(...) 42
 #endif
 
+mt19937 RNG(chrono::steady_clock::now().time_since_epoch().count());
+
 template <typename T> void minimize(T& a, T b) { a = min(a, b); }
 template <typename T> void maximize(T& a, T b) { a = max(a, b); }
 
