@@ -47,7 +47,7 @@ struct DiGraph {
         for (int i = 0; i < n; i++) {
             int relaxed = false;
 
-            for (int u = n; u >= 0; u--) {                 
+            for (int u = n; u >= 0; u--) {
                 // It's a bit more clever if we try to relax
                 // from n first since it is the source node
                 for (Edge& e : adj[u]) {
@@ -110,8 +110,8 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int h, w;
-    cin >> h >> w;
+    int w, h;
+    cin >> w >> h;
 
     int n = h * w;
 
@@ -120,7 +120,7 @@ int main() {
         if (j < 0 || j >= w) return -1;
         return i * w + j;
     };
-    
+
     auto west = [&](int i, int j) { return cell(i, j - 1); };
     auto east = [&](int i, int j) { return cell(i, j + 1); };
     auto north = [&](int i, int j) { return cell(i - 1, j); };
