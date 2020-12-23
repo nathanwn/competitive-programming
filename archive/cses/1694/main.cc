@@ -1,14 +1,6 @@
-#pragma once
-
 #include <bits/stdc++.h>
 
 using namespace std;
-
-/// Dinic algorithm for max flow
-/// This version of Dinic should work on flow graph with
-/// floating-point capacities
-/// @status: tested with:
-///   https://cses.fi/problemset/task/1694/
 
 template <typename T>
 struct FlowEdge {
@@ -21,8 +13,8 @@ struct FlowEdge {
 
 template <typename T>
 struct Dinic {
-    const T inf = numeric_limits<T>::max();
-    const T eps = (T) 1e-9;
+    static constexpr T inf = numeric_limits<T>::max();
+    static constexpr T eps = (T) 1e-9;
     int n;
     int s, t;
     vector<vector<int>> adj; // stores indices of edges
@@ -86,16 +78,36 @@ struct Dinic {
 
         while (bfs()) {
             fill(ptr.begin(), ptr.end(), 0);
-            T total_df = 0;
+            T totalDf = 0;
             while (true) {
                 T df = dfs(s, inf);
                 if (df <= eps) break;
-                total_df += df;
+                totalDf += df;
             }
-            if (total_df <= eps) break;
-            f += total_df;
+            if (totalDf <= eps) {
+                break;
+            }
+            f += totalDf;
         }
 
         return f;
     }
 };
+
+int main() {
+    int n, m;
+    cin >> n >> m;
+
+    Dinic<int64_t> solver(n, 0, n - 1);
+
+    for (int i = 0; i < m; i++) {
+        int u, v, c;
+        cin >> u >> v >> c;
+        u--; v--;
+        solver.addEdge(u, v, c);
+    }
+
+    cout << solver.maxFlow() << '\n';
+
+    return 0;
+}

@@ -4,6 +4,7 @@
 
 using namespace std;
 
+/// Calculate the smallest prime factor of every number <= N
 /// This is actually the Sieve of Eratosthenes algorithm
 /// @status: tested with:
 ///   https://cses.fi/problemset/task/1713
@@ -11,7 +12,7 @@ using namespace std;
 ///   N = 1e7: 0.25s
 ///   N = 1e8: 2.81s
 
-const int N = (int) 1e8;
+const int N = (int) 1e7;
 int spf[N + 1]; // spf[x]: smallest prime factor of x
 // vector<int> primes;
 
