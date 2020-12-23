@@ -21,8 +21,8 @@ struct FlowEdge {
 
 template <typename T>
 struct Dinic {
-    const T inf = numeric_limits<T>::max();
-    const T eps = (T) 1e-9;
+    static constexpr T inf = numeric_limits<T>::max();
+    static constexpr T eps = (T) 1e-9;
     int n;
     int s, t;
     vector<vector<int>> adj; // stores indices of edges
