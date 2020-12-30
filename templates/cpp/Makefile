@@ -1,2 +1,5 @@
 all:
-	g++ -std=c++11 -Wall -Wextra -Wshadow -DLOCAL -g main.cc -o main
+	g++ -std=c++11 -Wall -Wextra -Wshadow -fsanitize=address -fsanitize=undefined -DLOCAL -D_GLIBCXX_DEBUG -g main.cc -o main
+
+nodebug:
+	g++ -std=c++11 -Wall -Wextra -Wshadow -g main.cc -o main
