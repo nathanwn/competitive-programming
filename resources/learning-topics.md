@@ -1,14 +1,22 @@
-# 1. Intro
+# 0. Headnotes
 
-## 1.1. Meaning of Icons:
+## 0.1. Meaning of Icons:
 * :tv: : video tutorial or video lecture
 * :page_facing_up: : article, short paper, or blog post
 * :pencil: : problem with editorial
 * :book: : part of a book
 * :trophy: contest
 
-## 1.2. Books
-* CLRS: [Introduction to Algorithms (3rd Edition) - Cormen, Leiserson, Rivest, Stein](https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844)
+# 1. Books
+
+## 1.1. Free books
+
+* :book: [Competitive Programmer's Handbook](https://cses.fi/book/book.pdf)
+
+## 1.2. Non-free books
+
+* :book: [Introduction to Algorithms (3rd Edition) - Cormen, Leiserson, Rivest, Stein a.k.a CLRS](https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844)
+* :book: [Competitive Programming (4th Edition) by Steven Halim](https://cpbook.net)
 
 
 # 2. Discrete Mathematics
@@ -16,9 +24,10 @@
 ## 2.1. Asymptotic Notations
 
 * [Asymptotic Notations - MIT OCW 6.046J 2005](https://www.youtube.com/watch?v=whjt_N9uYFI&list=PL8B24C31197EC371C&index=2)
+* [Master Theorem - brilliant.org](https://brilliant.org/wiki/master-theorem/)
 * [A summary of recursion solving techniques - Kimmo Eriksson, KTH](https://www.math.kth.se/math/GRU/2012.2013/SF1610/CINTE/mastertheorem.pdf)
 
-# 3. Implementation Techniques
+# 3. Arrays
 
 ## 3.1. Basic
 
@@ -28,38 +37,43 @@
 
 ## 3.2. Intermediate
 
-### 3.2.1. Coordinate Compression
+### 3.2.1. Binary Search
+
+- :tv: [Errichto's Binary Search tutorial](https://www.youtube.com/watch?v=GU7DpgHINWQ)
+
+
+### 3.2.2. Coordinate Compression
 
 
 # 4. Data Structures
 
+## 4.0. Nice to know, not too practical in CP
+
+* :tv: [Binary Heap - MIT OCW](https://www.youtube.com/watch?v=B7hVxCmfPtM)
+* :tv: [AVL Tree - MIT OCW](https://www.youtube.com/watch?v=FNeL18KsWPc)
+
 ## 4.1. Basic
 
-### 4.1.1. Heap (Binary Heap)
-* :tv: [Heap - MIT OCW](https://www.youtube.com/watch?v=B7hVxCmfPtM)
-
-### 4.1.2. Disjoint Set
+### 4.1.1. Disjoint Set
 * :tv: [Disjoint Set - Bo Qian's Video](https://www.youtube.com/watch?v=p_AJmSDyt94)
 
 ## 4.2. Intermediate
-* :tv: [AVL Tree - MIT OCW](https://www.youtube.com/watch?v=FNeL18KsWPc)
 
-## 4.3. Upper-Intermediate
-
-### 4.3.1. Segment Tree
+### 4.2.1. Segment Tree
 
 * :page_facing_up: [Segment Tree - cp-algorithm](https://cp-algorithms.com/data_structures/segment_tree.html)
 * :tv: [Segment Tree - Algorithms Live! - Ep. 4](https://www.youtube.com/watch?v=Tr-xEGoByFQ&ab_channel=AlgorithmsLive%21)
 
+## 4.3. Upper-Intermediate
 
-### 4.3.2. Fenwick Tree
+### 4.3.1. Fenwick Tree
 
 * :page_facing_up: [Fenwick Tree - cp-algorithm](https://cp-algorithms.com/data_structures/fenwick.html)
 
-
-### 4.3.3. Sqrt Decomposition & Mo's Algorithm
+### 4.3.2. Sqrt Decomposition & Mo's Algorithm
 
 * :page_facing_up: [Sqrt Decomposition - cp-algorithm](https://cp-algorithms.com/data_structures/sqrt_decomposition.html)
+* :page_facing_up: [An alternative sorting order for Mo's algorithm - codeforces blog post](https://codeforces.com/blog/entry/61203)
 
 # 5. Graph Theory
 
@@ -84,12 +98,15 @@
 * :book: Strongly Connected Component - CLRS book - section 22.5 - page 615
 * :page_facing_up:
 
+### 5.2.2. Bipartite Checking
+
+* :page_facing_up: [Check whether a graph is bipartite - cp-algorithms](https://cp-algorithms.com/graph/bipartite-check.html)
+
 ## 5.3. Shortest Path
 
 ### 5.3.1. Dijkstra
 * :page_facing_up: [Dijkstra - cp-algorithms](https://cp-algorithms.com/graph/dijkstra.html)
 * :page_facing_up: [Dijkstra on Sparse Graph - cp-algorithms](https://cp-algorithms.com/graph/dijkstra_sparse.html)
-* :page_facing_up: [Dijstra proof - oregonstate.edu](https://web.engr.oregonstate.edu/~glencora/wiki/uploads/dijkstra-proof.pdf)
 
 ### 5.3.2. Bellman-Ford
 * :page_facing_up: [Bellman-Ford - cp-algorithms](https://cp-algorithms.com/graph/bellman_ford.html)
@@ -111,6 +128,7 @@
 
 ### Max Flow
 * :page_facing_up: [Ford-Fulkerson and Edmonds-Karp algorithms - cp-algorithms](https://cp-algorithms.com/graph/edmonds_karp.html)
+* :page_facing_up: [Dinic algorithm - cp-algorithms](https://cp-algorithms.com/graph/dinic.html)
 
 ### Matching
 
@@ -154,8 +172,9 @@
 
 # 8. Combinatorics
 
-## 8.1. Lexicalgraphic-order Generating
+## 8.1. Complete Search
 * :page_facing_up: [Generating all K-combinations - cp-algorithms](https://cp-algorithms.com/combinatorics/generating_combinations.html)
+
 
 # 9. Strings
 
@@ -171,4 +190,4 @@
 
 # 10. Bit Manipulation
 
-- [Errichto's C++ bitset lecture](https://www.youtube.com/watch?v=jqJ5s077OKo)
+- :tv: [Errichto's C++ bitset lecture](https://www.youtube.com/watch?v=jqJ5s077OKo)
