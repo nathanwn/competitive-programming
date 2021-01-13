@@ -184,7 +184,11 @@
 
 ## 9.2. Intermediate
 
-### 9.2.1. Knuth-Morris-Pratt (KMP)
+### 9.2.1. Z function
+
+* :page_facing_up: [Z-function - cp-algorithms](https://cp-algorithms.com/string/z-function.html)
+
+### 9.2.2. Knuth-Morris-Pratt (KMP)
 
 * :page_facing_up: [Prefix Function, KMP - cp-algorithms](https://cp-algorithms.com/string/prefix-function.html)
 
