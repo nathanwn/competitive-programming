@@ -1,16 +1,13 @@
 /// Tested here: https://judge.yosupo.jp/submission/31022
 
-#ifndef DSU_H_
-#define DSU_H_
+#pragma once
 
 struct DSU {
     int n;
     vector<int> p;
     vector<int> d;
 
-    DSU(int n) : n(n) {
-        p.resize(n);
-        d.resize(n, 0);
+    DSU(int n_) : n(n_), p(n), d(n) {
         for (int i = 0; i < n; i++) p[i] = i;
     }
 
@@ -32,5 +29,3 @@ struct DSU {
         return true;
     }
 };
-
-#endif // DSU_H_

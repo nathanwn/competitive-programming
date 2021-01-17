@@ -14,7 +14,6 @@ using namespace std;
 
 const int N = (int) 1e7;
 int spf[N + 1]; // spf[x]: smallest prime factor of x
-// vector<int> primes;
 
 void calcSmallestPrimeFactor() {
     for (int i = 2; i <= N; i += 2) spf[i] = 2;
@@ -26,9 +25,5 @@ void calcSmallestPrimeFactor() {
             if (spf[j] == j) spf[j] = i;
         }
     }
-
-    // for (int i = 2; i <= N; i++) {
-    //     if (spf[i] == i) primes.push_back(i);
-    // }
 }
 

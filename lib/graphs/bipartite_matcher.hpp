@@ -1,23 +1,19 @@
-/// Wrote a long long time ago (90% sure it is correct)
-/// Still need to test some day soon
-
-#ifndef HOPCROFT_KARP_H_
-#define HOPCROFT_KARP_H_
+#pragma once
 
 struct HopcroftKarp {
     const int INF = (int) 1e9;
-    int nU;
-    int nV;
+    int nu;
+    int nv;
     vector<vector<int>> adj;
     vector<int> layer;
-    vector<int> mateOfU;
-    vector<int> mateOfV;
+    vector<int> u_mate;
+    vector<int> v_mate;
 
-    Matcher(int nU, int nV) : nU(nU), nV(nV) {
-        adj.resize(nU);
-        layer.resize(nU);
-        mateOfU.resize(nU, -1);
-        mateOfV.resize(nV, -1);
+    Matcher(int nu, int nv) : nu(nu), nv(nv) {
+        adj.resize(nu);
+        layer.resize(nu);
+        u_mate.resize(nu, -1);
+        v_mate.resize(nv, -1);
     }
 
     void addEdge(int u, int v) {
@@ -28,9 +24,9 @@ struct HopcroftKarp {
         // Find all possible augmenting paths
         queue<int> q;
 
-        for (int u = 0; u < nU; u++) {
+        for (int u = 0; u < nu; u++) {
             // Consider only unmatched edges
-            if (mateOfU[u] == -1) {
+            if (u_mate[u] == -1) {
                 layer[u] = 0;
                 q.push(u);
             }
@@ -39,24 +35,24 @@ struct HopcroftKarp {
             }
         }
 
-        bool hasAugPath = false;
+        bool has_path = false;
 
         while (!q.empty()) {
             int u = q.front();
             q.pop();
 
             for (int& v : adj[u]) {
-                if (mateOfV[v] == -1) {
-                    hasAugPath = true;
+                if (v_mate[v] == -1) {
+                    has_path = true;
                 }
-                else if (layer[mateOfV[v]] == INF) {
-                    layer[mateOfV[v]] = layer[u] + 1;
-                    q.push(mateOfV[v]);
+                else if (layer[v_mate[v]] == INF) {
+                    layer[v_mate[v]] = layer[u] + 1;
+                    q.push(v_mate[v]);
                 }
             }
         }
 
-        return hasAugPath;
+        return has_path;
     }
 
     bool dfs(int u) {
@@ -65,9 +61,10 @@ struct HopcroftKarp {
         }
 
         for (int v : adj[u]) {
-            if ((mateOfV[v] == -1) || (layer[mateOfV[v]] == layer[u] + 1 && dfs(mateOfV[v]))) {
-                mateOfV[v] = u;
-                mateOfU[u] = v;
+            if ((v_mate[v] == -1) ||
+                    (layer[v_mate[v]] == layer[u] + 1 && dfs(v_mate[v]))) {
+                v_mate[v] = u;
+                u_mate[u] = v;
                 return true;
             }
         }
@@ -79,8 +76,8 @@ struct HopcroftKarp {
         int matching = 0;
 
         while (bfs()) { // there is at least 1 augmenting path
-            for (int u = 0; u < nU; u++) {
-                if (mateOfU[u] == -1 && dfs(u)) {
+            for (int u = 0; u < nu; u++) {
+                if (u_mate[u] == -1 && dfs(u)) {
                     ++matching;
                 }
             }
@@ -89,5 +86,3 @@ struct HopcroftKarp {
         return matching;
     }
 };
-
-#endif // HOPCROFT_KARP_H_
