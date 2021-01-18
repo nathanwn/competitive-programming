@@ -56,9 +56,7 @@ struct HopcroftKarp {
     }
 
     bool dfs(int u) {
-        if (layer[u] == INF) {
-            return false;
-        }
+        if (layer[u] == INF) return false;
 
         for (int v : adj[u]) {
             if ((v_mate[v] == -1) ||
