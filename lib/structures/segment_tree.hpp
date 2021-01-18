@@ -15,7 +15,6 @@ class SegmentTree {
     T defaultValue;
     T defaultLazy;
 
-
     int left(int node)  { return 2 * node + 1; }
     int right(int node) { return 2 * node + 2; }
 
