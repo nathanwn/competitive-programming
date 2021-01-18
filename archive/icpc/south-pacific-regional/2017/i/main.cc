@@ -59,7 +59,7 @@ struct SegmentTree {
     }
 
     void apply(int u, T delta) {
-        t[u].val = delta;
+        t[u].val += delta;
         t[u].is_lazy = true;
     }
 
@@ -156,8 +156,10 @@ int main() {
 
     for (int i = 0; i < n; i++) {
         // let f[x] be the number of values larger than x
+        if (toxicity > (int) 1e8) break;
         toxicity += seg_tree.query(sa[i], sa[i]);
-        double effectiveness = (double) i * (i + 1) / toxicity;
+        fprintf(stderr, "%d -> %d\n", sa[i], seg_tree.query(sa[i], sa[i]));
+        double effectiveness = (double) i * (i + 1) / (toxicity + 1);
         if (effectiveness > max_effectiveness) {
             max_effectiveness = effectiveness;
             ans = i + 1;
