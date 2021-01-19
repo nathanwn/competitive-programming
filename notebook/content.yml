@@ -1,0 +1,63 @@
+Graphs:
+  - dir: 'graphs'
+  - subtopics:
+    - name: 'Topological sort'
+      file: 'topo_sort.hpp'
+    - name: 'Strongly connected components'
+      file: 'scc.hpp'
+    - name: 'Euler path'
+      file: 'euler_path.hpp'
+    - name: 'Bipartite matcher'
+      file: 'bipartite_matcher.hpp'
+
+Flows:
+  - dir: 'flows'
+  - subtopics:
+    - name: 'Dinic Max Flow'
+      file: 'dinic.hpp'
+    - name: 'Edmonds-Karp'
+      file: 'edmonds_karp.hpp'
+
+Structures:
+  - dir: 'structures'
+  - subtopics:
+    - name: 'Disjoint Set'
+      file: 'dsu.hpp'
+    - name: 'Segment Tree (lazy update with sum queries)'
+      file: 'segment_tree_a.hpp'
+    - name: 'Segment Tree (lazy update with min queries)'
+      file: 'segment_tree_b.hpp'
+
+Math:
+  - dir: 'math'
+  - subtopics:
+    - name: 'Modulus operations'
+      file: 'mod.hpp'
+    - name: 'Modular integer struct'
+      file: 'modnum.hpp'
+    - name: 'Prime sieve'
+      file: 'modnum.hpp'
+    - name: 'Smallest prime factor'
+      file: 'smallest_prime_factor.hpp'
+    - name: 'Euler totient function'
+      file: 'euler_phi.hpp'
+    - name: 'Matrix'
+      file: 'matrix.hpp'
+
+Strings:
+  - dir: 'strings'
+  - subtopics:
+    - name: 'Trie'
+      file: 'trie.hpp'
+    - name: 'Z-function'
+      file: 'z_function.hpp'
+    - name: 'KMP'
+      file: 'kmp.hpp'
+
+Settings:
+  - dir: 'settings'
+  - subtopics:
+    - name: 'Makefile'
+      file: 'Makefile'
+    - name: 'Stress testing script'
+      file: 'stress.sh'

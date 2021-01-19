@@ -1,0 +1,59 @@
+\documentclass[fontsize=9pt,paper=a4,paper=landscape,twoside=false,parskip=half,
+headings=small,numbers=withenddot,usegeometry=true]{scrartcl}
+
+% ORIENTATION & MARGIN
+% \usepackage[a4paper, landscape, margin=1cm]{geometry}
+\pagestyle{empty}
+
+% MULTICOLS
+\usepackage{multicol}
+
+% BOXES
+\providecommand{\sectionbox}[1]{{\fboxsep0.5em\hspace*{-1.5\fboxsep}%
+ \fcolorbox{gray}{gray!3}{%
+ \parbox{\columnwidth}{%
+ \raggedright #1}}}}
+
+\setlength{\parskip}{0pt}
+\renewcommand{\arraystretch}{1.0}
+
+% FONT
+\usepackage[table]{xcolor}
+\usepackage{graphicx}
+\arrayrulecolor{gray!60}
+
+\setkomafont{disposition}{\color{violet}}
+\setkomafont{section}{\huge}
+\setkomafont{subsection}{\Large}
+\setkomafont{subsubsection}{\large}
+
+% REMOVE UNWANTED SPACES
+\renewcommand*{\thesection}{\Alph{section}}
+\RedeclareSectionCommand[beforeskip=-6pt, afterskip=3sp]{section}
+\RedeclareSectionCommand[beforeskip=-2pt, afterskip=3sp]{subsection}
+\RedeclareSectionCommand[beforeskip=-2pt, afterskip=3sp]{subsubsection}
+
+% FONT
+\renewcommand{\familydefault}{\sfdefault}
+
+% TOC
+\usepackage[toc]{multitoc}
+\renewcommand*{\multicolumntoc}{2}
+\setlength{\columnseprule}{0.5pt}
+
+% CODE
+\usepackage{minted}
+\setminted{
+    breaklines,
+    linenos,
+    frame=lines,
+    framesep=2mm,
+    baselinestretch=1.2
+}
+
+\begin{document}
+  \tableofcontents
+  \begin{multicols*}{2}
+    \input{content}
+  \end{multicols*}
+\end{document}
