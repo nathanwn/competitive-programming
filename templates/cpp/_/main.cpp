@@ -42,6 +42,8 @@ void debug_out(Head H, Tail... T) {
 
 mt19937 RNG(chrono::steady_clock::now().time_since_epoch().count());
 
+template <typename T> T ceilDiv(T a, T x) { return (a + x - 1) / x; }
+
 template <typename T> void minimize(T& a, T b) { a = min(a, b); }
 template <typename T> void maximize(T& a, T b) { a = max(a, b); }
 

@@ -1,10 +1,11 @@
 #pragma once
 
+#include <stdint.h>
+
 template <typename T, int md>
 struct Modnum {
     T v;
-    Modnum() : v(0) {}
-    Modnum(T _v) : v(normalize(_v)) {}
+    Modnum(T _v=0) : v(normalize(_v)) {}
 
     T normalize(int64_t x) {
         if (x < -md || x >= md) x %= md;
@@ -12,7 +13,7 @@ struct Modnum {
         return x;
     }
 
-    Modnum& operator+=(const Modnum& o) {
+    Modnum operator+(Modnum o) {
         if ((v += o.v) >= md) v -= md;
         return *this;
     }

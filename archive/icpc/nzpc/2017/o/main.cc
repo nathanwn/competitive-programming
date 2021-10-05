@@ -4,7 +4,8 @@ using namespace std;
 
 struct Query {
     int from, to, index;
-    Query(int from, int to, int index) : from(from), to(to), index(index) {}
+    Query(int from, int to, int index) :
+        from(from), to(to), index(index) {}
 };
 
 struct MoSolver {
@@ -59,12 +60,14 @@ struct MoSolver {
 
     vector<int> solve() {
         const int blockSize = sqrt(n);
-        sort(queries.begin(), queries.end(), [&](const Query& q1, const Query& q2) {
-            if (q1.from / blockSize != q2.from / blockSize) {
-                return q1.from / blockSize < q2.from / blockSize;
+        sort(queries.begin(), queries.end(),
+            [&](const Query& q1, const Query& q2) {
+                if (q1.from / blockSize != q2.from / blockSize) {
+                    return q1.from / blockSize < q2.from / blockSize;
+                }
+                return q1.to < q2.to;
             }
-            return q1.to < q2.to;
-        });
+        );
 
         vector<int> ans(queries.size());
 

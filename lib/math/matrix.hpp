@@ -48,7 +48,7 @@ struct Matrix : vec2d<T> {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 for (int k = 0; k < n; k++) {
-                    res[i][j] += a[i][k] * o[k][j];
+                    res[i][j] = res[i][j] + a[i][k] * o[k][j];
                 }
             }
         }
