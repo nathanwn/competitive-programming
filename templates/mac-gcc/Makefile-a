@@ -1,0 +1,47 @@
+# GNU_GCC_PATH := "/opt/homebrew/Cellar/gcc/14.2.0_1"
+# CXX := /opt/homebrew/bin/g++-15
+# CXX := /opt/homebrew/bin/g++
+CXX := g++
+GNU_GCC_PATH := $(shell find /opt/homebrew/Cellar/gcc -type d -depth 1 | sort -V | tail -n 1)
+GNU_GCC_MAJOR_VERSION := $(shell find /opt/homebrew/Cellar/gcc -type d -depth 1 | sort -V | tail -n 1 | xargs basename | awk -F '.' '{print $$1}')
+
+DEBUG := true
+
+CXXFLAGS := -std=c++17 \
+		-Wall \
+		-Wextra \
+		-Wno-deprecated \
+		-I$(GNU_GCC_PATH)/include/c++/$(GNU_GCC_MAJOR_VERSION) \
+		-I$(GNU_GCC_PATH)/include/c++/$(GNU_GCC_MAJOR_VERSION)/aarch64-apple-darwin24 \
+		-stdlib=libstdc++ \
+		-nostdinc++
+
+LDFLAGS := -L/opt/homebrew/opt/gcc/lib/gcc/$(GNU_GCC_MAJOR_VERSION) \
+		   -Wl,-rpath,/opt/homebrew/opt/gcc/lib/gcc/$(GNU_GCC_MAJOR_VERSION)
+
+DEBUG_CXXFLAGS :=
+# DEBUG_CXXFLAGS := \
+# 		-fsanitize=address \
+# 		# Disable ubsan on MacOS ARM as it is unstable and often results in weird
+# 		# false positives in my experience
+# 		-fno-sanitize=undefined \
+# 		-fno-sanitize-recover=all \
+# 		-D_GLIBCXX_DEBUG \
+# 		-D_GLIBCXX_DEBUG_PEDANTIC \
+# 		-DLOCAL -g
+
+ifeq ($(DEBUG),true)
+CXXFLAGS += $(DEBUG_CXXFLAGS)
+endif
+
+all: main
+
+main: main.cpp dbg.h
+	MallocNanoZone=0 $(CXX) $(CXXFLAGS) main.cpp $(LDFLAGS) -o main
+
+debug:
+	@echo $(GNU_GCC_MAJOR_VERSION)
+
+clean:
+	rm -rf main.dSYM main compile_commands.json
+.PHONY: clean
