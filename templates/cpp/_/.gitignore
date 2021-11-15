@@ -1,3 +1,10 @@
-main
+# Files without extensions
+*
+!/**/
+!*.*
+
+# clang-format
 .clang-format
-[0-9]
+
+# In case you want to include Makefile
+# !Makefile
