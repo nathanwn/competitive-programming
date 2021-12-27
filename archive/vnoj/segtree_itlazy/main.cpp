@@ -18,7 +18,7 @@ struct SegmentTree {
     int lc(int i) { return i << 1; }
     int rc(int i) { return (i << 1) + 1; }
 
-    // apply the update to one nodes (usually assignment or increment)
+    // apply the update to one node (usually assignment or increment)
     void apply(T& v, T d) {
         v += d;
     }
