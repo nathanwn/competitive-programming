@@ -8,8 +8,8 @@ using namespace std;
 
 template <typename T>
 struct SegmentTree {
-    T VAL_EMPTY;
-    T LAZY_EMPTY;
+    T empty_val;
+
     int n;
     vector<T> val;
     vector<T> lazy;
@@ -28,15 +28,12 @@ struct SegmentTree {
         return max(x, y);
     }
 
-    SegmentTree(vector<int>& a) {
-        VAL_EMPTY = numeric_limits<T>::min();
-        LAZY_EMPTY = 0;
-
+    SegmentTree(vector<int>& a, int empty_val_): empty_val(empty_val_) {
         n = 1;
         while (n < (int) a.size()) n <<= 1;
 
-        val.resize(n << 1, VAL_EMPTY);
-        lazy.resize(n << 1, LAZY_EMPTY);
+        val.resize(n << 1, empty_val);
+        lazy.resize(n << 1, 0);
         is_lazy.resize(n << 1, false);
 
         for (int i = 0; i < (int) a.size(); i++) {
@@ -54,7 +51,7 @@ struct SegmentTree {
             apply(lazy[lc(node)], lazy[node]);
             apply(val[rc(node)], lazy[node]);
             apply(lazy[rc(node)], lazy[node]);
-            lazy[node] = LAZY_EMPTY;
+            lazy[node] = 0;
             is_lazy[node] = false;
             is_lazy[lc(node)] = true;
             is_lazy[rc(node)] = true;
@@ -91,7 +88,7 @@ struct SegmentTree {
             return val[node];
         }
         if (high < nlow || nhigh < low) {
-            return VAL_EMPTY;
+            return empty_val;
         }
         pushDown(node);
         int nmid = nlow + (nhigh - nlow) / 2;
@@ -108,12 +105,11 @@ int main() {
     vector<int> a(n);
     for (int i = 0; i < n; i++) cin >> a[i];
 
-    SegmentTree<int64_t> st(a);
+    SegmentTree<int64_t> st(a, numeric_limits<int64_t>::min());
 
     int q; cin >> q;
 
     for (int i = 0; i < q; i++) {
-        st.print();
         int qt; cin >> qt;
         if (qt == 1) {
             int low, high, d;
