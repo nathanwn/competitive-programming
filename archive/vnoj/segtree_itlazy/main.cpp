@@ -28,7 +28,7 @@ struct SegmentTree {
         return max(x, y);
     }
 
-    SegmentTree(vector<int>& a, int empty_val_): empty_val(empty_val_) {
+    SegmentTree(vector<int>& a, T empty_val_): empty_val(empty_val_) {
         n = 1;
         while (n < (int) a.size()) n <<= 1;
 
