@@ -4,7 +4,7 @@
 !*.*
 
 # clang-format
-.clang-format
+# .clang-format
 
 # In case you want to include Makefile
 # !Makefile

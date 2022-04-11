@@ -1,0 +1,11 @@
+#include <bits/stdc++.h>
+
+#ifdef LOCAL
+#include "debug.h"
+#else
+#define debug(...) 42
+#endif
+
+using namespace std;
+
+int main() { return 0; }
