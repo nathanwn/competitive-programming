@@ -7,16 +7,18 @@
 * :book: : part of a book
 * :trophy: contest
 
-# 1. Books
 
-## 1.1. Free books
+# 1. Resources
 
+I would highly recommend the following resources when you are getting started.
+
+* :page_facing_up: [USACO Guide](https://usaco.guide/)
 * :book: [Competitive Programmer's Handbook](https://cses.fi/book/book.pdf)
+* :page_facing_up: [cp-algorithms](https://cp-algorithms.com/)
 
-## 1.2. Non-free books
+The following is great if you need a very solid theoretical background in various topics, including complexity analysis, correctness proofs of different algorithms. Most computer science students would know this book. Unfortunately, it is not the easiest to read, so I would recommend only reading the things you need to know at the beginning and not trying to read the book from start to finish. It is also not free.
 
 * :book: [Introduction to Algorithms (3rd Edition) - Cormen, Leiserson, Rivest, Stein a.k.a CLRS](https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844)
-* :book: [Competitive Programming (4th Edition) by Steven Halim](https://cpbook.net)
 
 
 # 2. Discrete Mathematics
@@ -27,6 +29,7 @@
 * [Master Theorem - brilliant.org](https://brilliant.org/wiki/master-theorem/)
 * [A summary of recursion solving techniques - Kimmo Eriksson, KTH](https://www.math.kth.se/math/GRU/2012.2013/SF1610/CINTE/mastertheorem.pdf)
 
+
 # 3. Arrays
 
 ## 3.1. Basic
@@ -35,14 +38,20 @@
 
 ### 3.1.2. Prefix Sum
 
+- :tv: [Errichto's Prefix Sum tutorial](https://youtu.be/PhgtNY_-CiY?si=-PONZ6qH7xOi7X9m)
+
 ## 3.2. Intermediate
 
 ### 3.2.1. Binary Search
 
 - :tv: [Errichto's Binary Search tutorial](https://www.youtube.com/watch?v=GU7DpgHINWQ)
+- :page_facing_up: [Ternary Search is overrated, and Binary Search Implementation - codeforces blog](https://codeforces.com/blog/entry/43440)
+- :page_facing_up: [Binary Search - cp-algorithms](https://cp-algorithms.com/num_methods/binary_search.html)
 
 
 ### 3.2.2. Coordinate Compression
+
+- :tv: [Errichto's Coordinate Compression tutorial](https://www.youtube.com/live/lz2GLJ7aIDY?si=_LbBYfusYCfBiI8C)
 
 
 # 4. Data Structures
@@ -75,6 +84,11 @@
 * :page_facing_up: [Sqrt Decomposition - cp-algorithm](https://cp-algorithms.com/data_structures/sqrt_decomposition.html)
 * :page_facing_up: [An alternative sorting order for Mo's algorithm - codeforces blog post](https://codeforces.com/blog/entry/61203)
 
+## 4.4. Advanced
+
+### 4.4.1. Persistent Segment Tree
+
+
 # 5. Graph Theory
 
 ## 5.1. Basic Topics
@@ -93,12 +107,16 @@
 
 ## 5.2. Intermediate Topics
 
-### 5.2.1. Strongly Connected Component
+### 5.2.1. Bridge Searching
 
-* :book: Strongly Connected Component - CLRS book - section 22.5 - page 615
-* :page_facing_up:
+* :page_facing_up: [cp-algorithms](https://cp-algorithms.com/graph/bridge-searching.html)
 
-### 5.2.2. Bipartite Checking
+### 5.2.2. Strongly Connected Components
+
+* :book: Strongly Connected Components - CLRS book - section 22.5 - page 615
+* :page_facing_up: [Finding strongly connected components/Building condensation graph - cp-algorithms](https://cp-algorithms.com/graph/strongly-connected-components.html)
+
+### 5.2.3. Bipartite Checking
 
 * :page_facing_up: [Check whether a graph is bipartite - cp-algorithms](https://cp-algorithms.com/graph/bipartite-check.html)
 
@@ -136,10 +154,12 @@
 # 6. Dynamic Programming
 
 - :trophy: [AtCoder's Educational DP Contest](https://atcoder.jp/contests/dp/tasks)
+  - :tv: [Errichto's solution video](https://www.youtube.com/live/FAQxdm0bTaw?si=lRGWsGip482dh8rU)
 - Errichto's DP Lectures
   - :tv: [Lecture 1](https://www.youtube.com/watch?v=YBSt1jYwVfU)
   - :tv: [Lecture 2](https://www.youtube.com/watch?v=1mtvm2ubHCY)
   - :tv: [Lecture 3](https://www.youtube.com/watch?v=pwpOC1dph6U)
+
 
 # 7. Number Theory
 
@@ -167,6 +187,8 @@
 
 ## 7.4. Modular Arithmetics
 
+- :page_facing_up: [Modular Arithmetic - USACO Guide](https://usaco.guide/gold/modular)
+
 ### 7.4.1. Modular Multiplicative Inverse
 
 
@@ -192,6 +214,39 @@
 
 * :page_facing_up: [Prefix Function, KMP - cp-algorithms](https://cp-algorithms.com/string/prefix-function.html)
 
-# 10. Bit Manipulation
+
+# 10. Linear Algebra
+
+## 10.1. Matrix Exponentiation
+
+* :tv: Errichto's Matrix Exponentiation Videos
+  * [Matrix Exponentiation + Fibonacci in log(N)](https://youtu.be/eMXNWcbw75E?si=xUGPYrfVAoK7azSf)
+  * [Matrix Exponentiation Coding (Part 1/2)](https://youtu.be/kQuCOFzWoa0?si=W_0I0rkpJsMUPxXL)
+  * [Matrix Exponentiation Coding (Part 2/2)](https://youtu.be/RA_SpxP2t54?si=IYhFWfkglNb63dyK)
+- :page_facing_up: [Matrix Exponentiation - USACO Guide](https://usaco.guide/plat/matrix-expo)
+
+
+# 11. Geometry
+
+## 11.1. Basic Topics
+
+* :book: [Victor Lecomte's book](https://victorlecomte.com/cp-geo.pdf)
+* :page_facing_up: [Geometry Primitives - USACO Guide](https://usaco.guide/plat/geo-pri)
+* :tv: [Errichto's CSES Geometry Solutions Video](https://www.youtube.com/live/G9QTjWtK_TQ?si=W-wxI2kOjAGqWQsi)
+
+## 11.2. Intermediate Topics
+
+* [Errichto's Closest Pair of Points Tutorial](https://www.youtube.com/live/l8ANAELnbPg?si=_I_fPA6L-AuYzGjx)
+* :page_facing_up: [Sweep Line - USACO Guide](https://usaco.guide/plat/sweep-line)
+
+
+# 12. Special Techniques
+
+## 12.1. Bit Manipulation
 
 - :tv: [Errichto's C++ bitset lecture](https://www.youtube.com/watch?v=jqJ5s077OKo)
+
+## 12.2. Meet In The Middle
+
+- :tv: [Errichto's Meet in the Middle Tutorial](https://www.youtube.com/live/18sJ3mK173s?si=4kQfhcV_iZcfrTeo)
+- :page_facing_up: [Meet in the Middle - USACO Guide](https://usaco.guide/gold/meet-in-the-middle)

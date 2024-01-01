@@ -1,14 +1,13 @@
 #include <bits/stdc++.h>
 
 #ifdef LOCAL
-#include "debug.h"
+#include "dbg.h"
 #else
-#define debug(...) 42
+#define dbg(...) 42
 #endif
 
 using namespace std;
 
 int main() {
-    //
     return 0;
 }
