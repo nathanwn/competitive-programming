@@ -25,7 +25,8 @@ DEBUG_CXXFLAGS := -fsanitize=address \
 				  -D_GLIBCXX_DEBUG \
 				  -D_GLIBCXX_DEBUG_PEDANTIC \
 				  -DLOCAL \
-				  -g
+				  -g \
+				  -gdwarf-3
 
 ifeq ($(DEBUG),true)
 CXXFLAGS += $(DEBUG_CXXFLAGS)
