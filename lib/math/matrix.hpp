@@ -1,5 +1,9 @@
 #pragma once
 
+#include <vector>
+
+using namespace std;
+
 template <typename T>
 struct vec2d : public vector<vector<T>> {
     vec2d(int n=0, int m=0, T t=T())

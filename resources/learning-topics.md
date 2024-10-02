@@ -250,3 +250,8 @@ The following is great if you need a very solid theoretical background in variou
 
 - :tv: [Errichto's Meet in the Middle Tutorial](https://www.youtube.com/live/18sJ3mK173s?si=4kQfhcV_iZcfrTeo)
 - :page_facing_up: [Meet in the Middle - USACO Guide](https://usaco.guide/gold/meet-in-the-middle)
+
+## 12.3. Low-level Optimizations
+
+- :book: [Algorithms for Modern Hardware - Sergey Slotin](https://en.algorithmica.org/hpc/)
+- :page_facing_up: [Tutorial on SIMD vectorisation to speed up brute force](https://codeforces.com/blog/entry/98594)
