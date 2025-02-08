@@ -1,4 +1,11 @@
-__pycache__
-.DS_Store
-*.class
 .cache
+
+# MacOS
+.DS_Store
+*.dSYM
+
+# Python
+__pycache__
+
+# Java
+*.class
