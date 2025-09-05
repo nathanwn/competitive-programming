@@ -1,9 +1,0 @@
-# Files without extensions
-*
-!/**/
-!*.*
-
-# !Makefile
-debug.h
-.clang-format
-stress.sh

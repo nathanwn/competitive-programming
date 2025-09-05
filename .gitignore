@@ -9,3 +9,8 @@ __pycache__
 
 # Java
 *.class
+
+# C++
+.clangd
+*.o
+compile_commands.json
