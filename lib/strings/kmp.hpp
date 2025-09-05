@@ -1,6 +1,9 @@
 #pragma once
 
-// Copied and pasted from cp-algorithms
+#include <vector>
+#include <string>
+
+using namespace std;
 
 vector<int> kmp(string& s) {
     int n = (int)s.length();

@@ -88,7 +88,7 @@ int64_t modInv(int64_t a) {
 
 int inv[N + 1];
 
-int calcInv() {
+void calcInv() {
     inv[1] = 1;
 
     for(int i = 2; i <= N; ++i) {

@@ -1,11 +1,12 @@
-#pragma once
+#include <bits/stdc++.h>
 
-#include <stdint.h>
+using namespace std;
 
 template <typename T, int md>
 struct Modnum {
     T v;
-    Modnum(T _v=0) : v(normalize(_v)) {}
+    Modnum() : v(0) {}
+    Modnum(T _v) : v(normalize(_v)) {}
 
     T normalize(int64_t x) {
         if (x < -md || x >= md) x %= md;
@@ -13,7 +14,7 @@ struct Modnum {
         return x;
     }
 
-    Modnum operator+(Modnum o) {
+    Modnum& operator+=(const Modnum& o) {
         if ((v += o.v) >= md) v -= md;
         return *this;
     }
@@ -24,16 +25,19 @@ struct Modnum {
     }
 
     Modnum& operator*=(const Modnum& o) {
-        v *= o.v; v %= md; return *this;
+        int64_t r = (int64_t) v * o.v;
+        r %= md;
+        v = r;
+        return *this;
     }
 
     Modnum operator+(const Modnum& o) const { return Modnum(v) += o; }
     Modnum operator-(const Modnum& o) const { return Modnum(v) -= o; }
     Modnum operator*(const Modnum& o) const { return Modnum(v) *= o; }
 
-    ModNum pow(int64_t x) {
-        ModNum a = v;
-        ModNum res = 1;
+    Modnum pow(int64_t x) {
+        Modnum a = v;
+        Modnum res = 1;
         while (x > 0) {
             if (x & 1) res *= a;
             a *= a;
@@ -42,7 +46,7 @@ struct Modnum {
         return res;
     }
 
-    friend istream& operator>>(istream& is, const Modnum& obj) {
+    friend istream& operator>>(istream& is, Modnum& obj) {
         return is >> obj.v;
     }
 
@@ -53,5 +57,20 @@ struct Modnum {
 
 const int MOD = 1e9 + 7;
 using ModInt = Modnum<int, MOD>;
-using ModInt64 = Modnum<int64_t, MOD>;
 
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    cin >> n;
+
+    for (int i = 0; i < n; i++) {
+        ModInt a;
+        int b;
+        cin >> a >> b;
+        cout << a.pow(b) << '\n';
+    }
+
+    return 0;
+}

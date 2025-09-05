@@ -1,4 +1,6 @@
-#pragma once
+#include <bits/stdc++.h>
+
+using namespace std;
 
 template <typename T>
 struct vec2d : public vector<vector<T>> {
@@ -48,7 +50,7 @@ struct Matrix : vec2d<T> {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 for (int k = 0; k < n; k++) {
-                    res[i][j] = res[i][j] + a[i][k] * o[k][j];
+                    res[i][j] += a[i][k] * o[k][j];
                 }
             }
         }
@@ -95,21 +97,42 @@ struct Modnum {
     Modnum operator+(const Modnum& o) const { return Modnum(v) += o; }
     Modnum operator-(const Modnum& o) const { return Modnum(v) -= o; }
     Modnum operator*(const Modnum& o) const { return Modnum(v) *= o; }
+
+    friend istream& operator>>(istream& is, const Modnum& obj) {
+        return is >> obj.v;
+    }
+
+    friend ostream& operator<<(ostream& os, const Modnum& obj) {
+        return os << obj.v;
+    }
 };
-
-template <class T, int md>
-istream& operator>>(istream& is, const Modnum<T, md>& obj) {
-    is >> obj.v;
-    return is;
-}
-
-template <class T, int md>
-ostream& operator<<(ostream& os, const Modnum<T, md>& obj) {
-    os << obj.v;
-    return os;
-}
 
 const int MOD = 1e9 + 7;
 using ModInt = Modnum<int, MOD>;
 using ModInt64 = Modnum<int64_t, MOD>;
 
+int main() {
+    int64_t n;
+    cin >> n;
+
+    Matrix<ModInt64> m(2);
+    m[0][0] = 19;
+    m[0][1] = 7;
+    m[1][0] = 6;
+    m[1][1] = 20;
+
+    Matrix<ModInt64> res(2);
+    res.identity();
+
+    while (n) {
+        if (n & 1) {
+            res = res * m;
+        }
+        m = m * m;
+        n >>= 1;
+    }
+
+    cout << res[0][0] << '\n';
+
+    return 0;
+}
