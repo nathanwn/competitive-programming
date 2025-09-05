@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 for((i = 1; ; ++i)); do
     echo '=================='
@@ -8,5 +8,7 @@ for((i = 1; ; ++i)); do
     fi
     echo "# Test $i"
     ./main < "$i.in" | tee "$i.out"
-    diff -w "$i.out" "$i.ans" || break
+    if [[ ! -f "$i.ans" ]] ; then
+        diff -w "$i.out" "$i.ans" || break
+    fi
 done
